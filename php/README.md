@@ -58,3 +58,10 @@ services:
     volumes:
       - <path to your symfony project root>:/var/www/html
 ```
+
+or use `docker build` command
+
+```bash
+cp /path/to/your/dockerfile
+docker build -t symfony3-php:personal-edition --build-arg GITHUB_OAUTH_TOKEN=<your GitHub token> .
+```
