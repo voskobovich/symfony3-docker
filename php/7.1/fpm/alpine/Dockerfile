@@ -39,5 +39,4 @@ ONBUILD ARG GITHUB_OAUTH_TOKEN
 ONBUILD RUN set -xe \
     && curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
-    && composer config -g github-oauth.github.com $GITHUB_OAUTH_TOKEN \
-    && composer global require "fxp/composer-asset-plugin:^1.2.0"
+    && composer config -g github-oauth.github.com $GITHUB_OAUTH_TOKEN
