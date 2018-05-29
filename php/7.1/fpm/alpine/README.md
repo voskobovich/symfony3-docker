@@ -25,13 +25,13 @@ Respective Dockerfile links:
 Create a new `Dockerfile` with this content
 
 ```dockerfile
-FROM voskobovich/yii2-php:7-fpm-alpine
+FROM voskobovich/symfony3-php:7-fpm-alpine
 
 RUN chmod -R 774 /root /root/.composer
 
 WORKDIR /var/www/html
 
-COPY ./source ./
+COPY ./app ./
 
 RUN set -xe \
  && chown -R operator:root ./
